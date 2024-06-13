@@ -1,0 +1,40 @@
+#Heading{
+    display: flex;
+    justify-content: center;
+    background: #fbc8c8;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    background: #333;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#input{
+    width: 310px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: left;
+
+}
+.container button i{
+    height: 20px;
+    width: 40px;
+}
+.containertwo{
+    height: 250px;
+    width: 300px;
+    background: #fbc8c8;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+    box-shadow: rgba(red, green, rgb(88, 88, 232), alpha);
+    border-radius: 5px;
+}
