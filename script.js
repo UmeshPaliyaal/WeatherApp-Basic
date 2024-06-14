@@ -4,6 +4,7 @@ const Wind = document.getElementById("wind");
 const TempFl = document.getElementById("tempfl");
 const City = document.getElementById("city");
 const Temp = document.getElementById("temp");
+const Humidity = document.getElementById("hum");
 const ContainerTwo = document.querySelector(".containertwo");
 
 
@@ -26,6 +27,7 @@ Btn.addEventListener("click", async ()=>{
     Temp.innerText =  data.main.temp 
     TempFl.innerText = data.main.feels_like
     Wind.innerText =  data.wind.speed
+    Humidity.innerText = data.main.humidity
     }
 })
 
