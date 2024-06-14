@@ -13,6 +13,10 @@ async function Get_Data(cityName){
 return await promise.json();
 }
 Btn.addEventListener("click", async ()=>{
+     setTimeout(()=>{
+         Btn.classList = "btn2"
+     },)
+
     const Value = Input.value;
     const data =  await Get_Data(Value)
     console.log(data)
