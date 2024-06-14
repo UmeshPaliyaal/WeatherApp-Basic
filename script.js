@@ -1,14 +1,14 @@
 const Btn = document.getElementById("btn");
 const Input = document.getElementById("input");
-const Country = document.getElementById("country");
-const Region = document.getElementById("region");
+const Wind = document.getElementById("wind");
+const TempFl = document.getElementById("tempfl");
 const City = document.getElementById("city");
 const Temp = document.getElementById("temp");
 const ContainerTwo = document.querySelector(".containertwo");
 
 
 async function Get_Data(cityName){
-   let promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=7423db57c1ad4e6a9a2185631241306&q=${cityName}&aqi=yes`
+   let promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=40938f3988640a4502fe127637507684&units=metric`
 )
 return await promise.json();
 }
@@ -22,10 +22,10 @@ Btn.addEventListener("click", async ()=>{
         alert("please enter a city name")
     }else{
     ContainerTwo.style.display = "block"
-    Country.innerText = "Country- " + data.location.country
-    Region.innerText = "Region- " + data.location.region
-    City.innerText = "City- " + data.location.name
-    Temp.innerText = "Temprature- " + data.current.temp_c + " °C"
+    City.innerText = data.name
+    Temp.innerText =  data.main.temp 
+    TempFl.innerText = data.main.feels_like
+    Wind.innerText =  data.wind.speed
     }
 })
 
